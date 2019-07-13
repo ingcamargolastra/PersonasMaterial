@@ -13,4 +13,5 @@
     <string name="table_apellido">Apellido</string>
     <string name="opcion_1">Agregar</string>
     <string name="opcion_2">Listar</string>
+    <string name="mensaje">Persona Guardada Exitosamente</string>
 </resources>
