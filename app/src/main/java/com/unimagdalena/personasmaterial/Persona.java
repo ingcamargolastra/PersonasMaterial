@@ -47,4 +47,16 @@ class Persona {
     public String getApellido() {
         return apellido;
     }
+
+    public void guardar(){
+        Datos.agregar(this);
+    }
+
+    public void editar(){
+        Datos.editar(this);
+    }
+
+    public void eliminar(){
+        Datos.eliminar(this);
+    }
 }
