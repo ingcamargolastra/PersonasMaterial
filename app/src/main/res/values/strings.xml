@@ -18,4 +18,8 @@
     <string name="titulo_detalle">Detalle de la persona</string>
     <string name="nombre_persona">Nombre</string>
     <string name="apellido_persona">Apellido</string>
+    <string name="titulo_eliminar">Eliminar Persona</string>
+    <string name="positivo">Si</string>
+    <string name="negativo">No</string>
+    <string name="mensaje_eliminar">¿Seguro que desea eliminar a esta persona?</string>
 </resources>

@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdaptadorPersona.OnPersonaClickListener {
     private RecyclerView lstOpciones;
     Intent i;
     private ArrayList<Persona> personas;
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         lstOpciones = findViewById(R.id.lstPersonas);
         personas = new ArrayList<>();
-        final AdaptadorPersona adapter = new AdaptadorPersona(personas);
+        final AdaptadorPersona adapter = new AdaptadorPersona(personas, this);
         llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayout.VERTICAL);
         lstOpciones.setLayoutManager(llm);
@@ -74,4 +74,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onPersonaClick(Persona p) {
+        Intent i = new Intent(MainActivity.this, DetallePersona.class);
+        Bundle b = new Bundle();
+        b.putString("id",p.getId());
+        b.putString("nombre",p.getNombre());
+        b.putString("apellido",p.getApellido());
+        b.putInt("foto",p.getFoto());
+        i.putExtra("datos",b);
+        startActivity(i);
+        finish();
+    }
 }
