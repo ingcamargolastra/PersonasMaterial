@@ -14,4 +14,8 @@
     <string name="opcion_1">Agregar</string>
     <string name="opcion_2">Listar</string>
     <string name="mensaje">Persona Guardada Exitosamente</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="titulo_detalle">Detalle de la persona</string>
+    <string name="nombre_persona">Nombre</string>
+    <string name="apellido_persona">Apellido</string>
 </resources>
